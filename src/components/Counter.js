@@ -1,10 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-function Counter({message = "DummyUserName"}){
+function Counter(){
+    const [count,setCount] = useState(0);
     return(
-        <div>
-            <p>Hello,{message}</p>
-        </div>
+        <p>
+            {count}
+            <button onClick={() =>setCount(count => count+1)}>plus</button>
+        </p>
     );
 }
 
